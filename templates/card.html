@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flash Card</title>
+    <link rel="stylesheet" href="/static/card.css">
+</head>
+
+<body>
+    <h1>Flash Card</h1>
+    Question: {{ card.question }}
+    Answer: {{card.answer}}
+    <p>
+        <a href="{{url_for('welcome')}}">
+            Home
+        </a>
+        <button>
+            {% if index < max_index %}
+            <a href="{{url_for('card_view', index=index+1)}}">
+                Next card
+            </a>
+            {% else %}
+            <a href="{{url_for('card_view', index=0)}}">
+                Start Over
+            </a>
+            {% endif %}
+        </button>
+    </p>
+</body>
+
+</html>
