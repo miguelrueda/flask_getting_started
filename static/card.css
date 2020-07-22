@@ -1,6 +1,5 @@
-.container {
-    width: 100vw;
-    height: 100vh;
-    background: cadetblue;
-
+body {
+    font-family: sans-serif;
+    color: cornflowerblue;
+    background-color: floralwhite;
 }
